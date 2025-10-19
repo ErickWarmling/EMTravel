@@ -31,7 +31,7 @@ public class LoginViewModel extends ViewModel {
             } else {
                 statusLogin.postValue(status);
             }
-            statusLogin.removeSource(resultadoLogin); // remove a source para não receber mais updates
+            statusLogin.removeSource(resultadoLogin);
         });
     }
 

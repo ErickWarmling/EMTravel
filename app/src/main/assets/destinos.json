@@ -1,0 +1,44 @@
+[
+  {
+    "nome": "Paris",
+    "localizacao": "França",
+    "categoria": "Cidade",
+    "descricao": "A cidade do amor e da Torre Eiffel.",
+    "imagemUrl": "https://images.pexels.com/photos/1850619/pexels-photo-1850619.jpeg"
+  },
+  {
+    "nome": "Nova York",
+    "localizacao": "Estados Unidos",
+    "categoria": "Cidade",
+    "descricao": "A cidade que nunca dorme, famosa pela Estátua da Liberdade.",
+    "imagemUrl": "https://images.pexels.com/photos/34344517/pexels-photo-34344517.jpeg"
+  },
+  {
+    "nome": "Roma",
+    "localizacao": "Itália",
+    "categoria": "Cidade",
+    "descricao": "A cidade eterna, repleta de história e ruínas antigas.",
+    "imagemUrl": "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg"
+  },
+  {
+    "nome": "Maldivas",
+    "localizacao": "Oceano Índico",
+    "categoria": "Praia",
+    "descricao": "Ilhas paradisíacas de águas cristalinas e areias brancas.",
+    "imagemUrl": "https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg"
+  },
+  {
+    "nome": "Machu Picchu",
+    "localizacao": "Peru",
+    "categoria": "Histórico",
+    "descricao": "Antiga cidade inca localizada nas montanhas dos Andes.",
+    "imagemUrl": "https://images.pexels.com/photos/259967/pexels-photo-259967.jpeg"
+  },
+  {
+    "nome": "Tóquio",
+    "localizacao": "Japão",
+    "categoria": "Cidade",
+    "descricao": "Metropole futurista com cultura tradicional japonesa.",
+    "imagemUrl": "https://images.pexels.com/photos/2341830/pexels-photo-2341830.jpeg"
+  }
+]
