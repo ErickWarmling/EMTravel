@@ -2,6 +2,7 @@ package com.example.emtravel.ui;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.emtravel.model.Usuario;
@@ -34,18 +35,19 @@ public class CadastroUsuarioViewModel extends ViewModel {
         Date dataNascimento = converterData(dataNasc);
         if (dataNascimento == null) {
             statusCadastro.setValue("Data inválida");
+            return;
         }
 
         Usuario usuario = new Usuario(null, nome, email, dataNascimento, telefone);
-        // Observa o status do repository e transforma a mensagem para CadastroUsuarioActivity
-        LiveData<String> statusRepository = usuarioRepository.cadastrarUsuario(usuario, senha);
-        statusCadastro.addSource(statusRepository, status -> {
+
+        LiveData<String> resultadoCadastro = usuarioRepository.cadastrarUsuario(usuario, senha);
+        statusCadastro.addSource(resultadoCadastro, status -> {
             if ("success".equals(status)) {
                 statusCadastro.setValue("Cadastro realizado com sucesso!");
             } else {
                 statusCadastro.setValue(status);
             }
-            statusCadastro.removeSource(statusRepository);
+            statusCadastro.removeSource(resultadoCadastro);
         });
     }
 

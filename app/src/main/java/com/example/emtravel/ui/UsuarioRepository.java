@@ -56,4 +56,8 @@ public class UsuarioRepository {
                 });
         return statusLogin;
     }
+
+    public boolean usuarioLogado() {
+        return auth.getCurrentUser() != null;
+    }
 }

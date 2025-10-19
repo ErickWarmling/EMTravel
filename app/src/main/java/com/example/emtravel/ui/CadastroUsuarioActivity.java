@@ -1,8 +1,10 @@
 package com.example.emtravel.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +18,7 @@ import com.example.emtravel.R;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
 
+    private ImageView imageViewSetaVoltar;
     private EditText edNomeUsuario;
     private EditText edEmailUsuario;
     private EditText edDataNascimentoUsuario;
@@ -30,6 +33,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_cadastro_usuario);
 
+        imageViewSetaVoltar = findViewById(R.id.imageViewSetaVoltar);
         edNomeUsuario = findViewById(R.id.edNomeUsuario);
         edEmailUsuario = findViewById(R.id.edEmailUsuario);
         edDataNascimentoUsuario = findViewById(R.id.edDataNascimentoUsuario);
@@ -43,10 +47,11 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             Toast.makeText(this, status, Toast.LENGTH_SHORT).show();
 
             if ("Cadastro realizado com sucesso!".equals(status)) {
-                finish(); // volta para a tela de login
+                voltarParaLogin();
             }
         });
 
+        configurarSetaVoltar();
         configurarBotaoCadastrarUsuario();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -66,6 +71,20 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
             cadastroUsuarioViewModel.salvarUsuario(nome, email, dataNasc, telefone, senha);
         });
+    }
+
+    private void configurarSetaVoltar() {
+        imageViewSetaVoltar.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        });
+    }
+
+    private void voltarParaLogin() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish(); // Volta para a tela de login
     }
 
 }
