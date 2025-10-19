@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.CadastroUsuarioActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutCabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0F2536"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageViewSetaVoltar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:contentDescription="Voltar"
+            android:focusable="true"
+            app:srcCompat="@drawable/ic_seta_voltar" />
+
+        <TextView
+            android:id="@+id/tvTituloCabecalho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Cadastro"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFormulario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvNomeUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Nome Completo"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edNomeUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bordas_arredondadas_edit_text"
+            android:ems="10"
+            android:hint="Informe o nome"
+            android:inputType="text"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/tvEmailUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="E-mail"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edEmailUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bordas_arredondadas_edit_text"
+            android:ems="10"
+            android:hint="Informe o e-mail"
+            android:inputType="textEmailAddress"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/tvDataNascimentoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Data de Nascimento"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edDataNascimentoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bordas_arredondadas_edit_text"
+            android:ems="10"
+            android:hint="Informe a data de nascimento"
+            android:inputType="date"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/tvTelefoneUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Telefone"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edTelefoneUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bordas_arredondadas_edit_text"
+            android:ems="10"
+            android:hint="Informe o telefone"
+            android:inputType="phone"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/tvSenhaUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Senha"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edSenhaUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bordas_arredondadas_edit_text"
+            android:ems="10"
+            android:hint="Informe a senha"
+            android:inputType="textPassword"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnCadastrarUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#EE872B"
+            android:text="Cadastrar" />
+    </LinearLayout>
+
+</LinearLayout>

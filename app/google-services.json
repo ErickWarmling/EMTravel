@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "17453959597",
+    "project_id": "emtravel-82c20",
+    "storage_bucket": "emtravel-82c20.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17453959597:android:5dab4edaf1d1848bf8f924",
+        "android_client_info": {
+          "package_name": "com.example.emtravel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa4EZGMWoiQhwXOu_iJNApPPEfv9ciuFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
