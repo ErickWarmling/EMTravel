@@ -40,8 +40,8 @@ public class DestinoAdapter extends RecyclerView.Adapter<DestinoAdapter.DestinoV
         Destino destino = destinos.get(position);
 
         holder.tvNomeDestino.setText(destino.getNome());
-        holder.tvLocalizacao.setText(destino.getLocalizacao());
-        holder.tvCategoria.setText(destino.getCategoria());
+        holder.tvLocalizacao.setText("Localização: " + destino.getLocalizacao());
+        holder.tvCategoria.setText("Categoria: " + destino.getCategoria());
 
         Glide.with(holder.imageViewDestino.getContext())
                 .load(destino.getImagemUrl())
