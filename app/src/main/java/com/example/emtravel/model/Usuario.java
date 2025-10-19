@@ -7,10 +7,10 @@ public class Usuario {
     private String uid;
     private String nome;
     private String email;
-    private Date dataNascimento;
+    private String dataNascimento;
     private String telefone;
 
-    public Usuario(String uid, String nome, String email, Date dataNascimento, String telefone) {
+    public Usuario(String uid, String nome, String email, String dataNascimento, String telefone) {
         this.uid = uid;
         this.nome = nome;
         this.email = email;
@@ -45,11 +45,11 @@ public class Usuario {
         this.email = email;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

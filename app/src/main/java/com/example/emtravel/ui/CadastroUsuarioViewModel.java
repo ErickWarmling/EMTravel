@@ -24,16 +24,15 @@ public class CadastroUsuarioViewModel extends ViewModel {
         return statusCadastro;
     }
 
-    public void salvarUsuario(String nome, String email, String dataNasc, String telefone, String senha) {
-        String camposVazios = validarCampos(nome, email, dataNasc, telefone, senha);
+    public void salvarUsuario(String nome, String email, String dataNascimento, String telefone, String senha) {
+        String camposVazios = validarCampos(nome, email, dataNascimento, telefone, senha);
         if (camposVazios != null) {
             statusCadastro.setValue(camposVazios);
             return;
         }
 
-        Date dataNascimento = converterData(dataNasc);
-        if (dataNascimento == null) {
-            statusCadastro.setValue("Data inválida");
+        if (!validarData(dataNascimento)) {
+            statusCadastro.setValue("Data inválida. Use o formato DD/MM/YYYY");
             return;
         }
 
@@ -57,11 +56,14 @@ public class CadastroUsuarioViewModel extends ViewModel {
         return null;
     }
 
-    private Date converterData(String dataNasc) {
+    public boolean validarData(String dataNasc) {
         try {
-            return new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).parse(dataNasc);
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+            simpleDateFormat.setLenient(false);
+            simpleDateFormat.parse(dataNasc);
+            return true;
         } catch (ParseException e) {
-            return null;
+            return false;
         }
     }
 }
