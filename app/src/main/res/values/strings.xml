@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">EMTravel</string>
     <string name="cadastre_se"><u>Cadastre-se</u></string>
-    <string name="title_home">Destinos</string>
-    <string name="title_dashboard">Roteiros</string>
-    <string name="title_notifications">Perfil</string>
+    <string name="title_destinos">Destinos</string>
+    <string name="title_roteiros">Roteiros</string>
+    <string name="title_perfil">Perfil</string>
     <string name="title_activity_main">MainActivity</string>
 </resources>

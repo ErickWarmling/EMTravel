@@ -57,7 +57,23 @@ public class UsuarioRepository {
         return statusLogin;
     }
 
-    public boolean usuarioLogado() {
-        return auth.getCurrentUser() != null;
+    public MutableLiveData<Usuario> getUsuarioLogado() {
+        MutableLiveData<Usuario> usuarioLiveData = new MutableLiveData<>();
+
+        if (auth.getCurrentUser() != null) {
+            String uid = auth.getCurrentUser().getUid();
+
+            database.getReference("usuarios")
+                    .child(uid)
+                    .get()
+                    .addOnSuccessListener(snapshot -> {
+                        Usuario usuario = snapshot.getValue(Usuario.class);
+                        usuarioLiveData.setValue(usuario);
+                    })
+                    .addOnFailureListener(e -> usuarioLiveData.setValue(null));
+        } else {
+            usuarioLiveData.setValue(null);
+        }
+        return usuarioLiveData;
     }
 }

@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_destinos">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_destinos"
         android:name="com.example.emtravel.ui.destino.DestinoFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_destinos"
         tools:layout="@layout/fragment_destino" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_roteiros"
         android:name="com.example.emtravel.ui.roteiro.RoteiroFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_roteiros"
         tools:layout="@layout/fragment_roteiro" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_perfil"
         android:name="com.example.emtravel.ui.perfil.PerfilFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_perfil"
         tools:layout="@layout/fragment_perfil" />
 </navigation>

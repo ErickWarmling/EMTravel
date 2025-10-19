@@ -35,7 +35,4 @@ public class LoginViewModel extends ViewModel {
         });
     }
 
-    public boolean isUsuarioLogado() {
-        return usuarioRepository.usuarioLogado();
-    }
 }

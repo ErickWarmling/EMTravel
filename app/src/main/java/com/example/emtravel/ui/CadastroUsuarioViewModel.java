@@ -2,7 +2,6 @@ package com.example.emtravel.ui;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.emtravel.model.Usuario;
