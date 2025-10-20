@@ -12,10 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EMTravel">
         <activity
+            android:name=".ui.DetalheDestinoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main" />
-
         <activity
             android:name=".ui.CadastroUsuarioActivity"
             android:exported="false" />

@@ -19,9 +19,15 @@ import java.util.List;
 public class DestinoAdapter extends RecyclerView.Adapter<DestinoAdapter.DestinoViewHolder> {
 
     private List<Destino> destinos;
+    private OnDestinoClickListener listener;
 
-    public DestinoAdapter(List<Destino> destinos) {
+    public interface OnDestinoClickListener {
+        void onDestinoClick(Destino destino);
+    }
+
+    public DestinoAdapter(List<Destino> destinos, OnDestinoClickListener listener) {
         this.destinos = destinos;
+        this.listener = listener;
     }
 
     public void setDestinos(List<Destino> destinos) {
@@ -46,6 +52,12 @@ public class DestinoAdapter extends RecyclerView.Adapter<DestinoAdapter.DestinoV
         Glide.with(holder.imageViewDestino.getContext())
                 .load(destino.getImagemUrl())
                 .into(holder.imageViewDestino);
+
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onDestinoClick(destino);
+            }
+        });
     }
 
     @Override
