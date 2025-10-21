@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -82,14 +84,18 @@ public class CadastroRoteiroViewModel extends ViewModel {
         }
 
         // Verifica se a data de início é antes da data de fim
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); // formato que você está recebendo
         try {
-            long inicio = Long.parseLong(roteiro.getDataInicio().replaceAll("[^0-9]", ""));
-            long fim = Long.parseLong(roteiro.getDataFim().replaceAll("[^0-9]", ""));
-            if (inicio > fim) {
+            Date dataInicio = sdf.parse(roteiro.getDataInicio());
+            Date dataFim = sdf.parse(roteiro.getDataFim());
+            if (dataInicio.after(dataFim)) {
                 mensagemErro.setValue("A data de início não pode ser posterior à data de fim.");
                 return;
             }
-        } catch (Exception ignored) { }
+        } catch (Exception e) {
+            mensagemErro.setValue("Formato de data inválido.");
+            return;
+        }
 
         String id = roteiroRef.push().getKey();
         if (id != null) {

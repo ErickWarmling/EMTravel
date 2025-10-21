@@ -3,42 +3,63 @@
     "nome": "Paris",
     "localizacao": "França",
     "categoria": "Cidade",
-    "descricao": "A cidade do amor e da Torre Eiffel.",
+    "descricao": "Paris é conhecida como a cidade do amor e da moda, famosa mundialmente pela Torre Eiffel, Museu do Louvre, Catedral de Notre-Dame e seus charmosos cafés ao longo do Sena. É um destino perfeito para amantes de arte, gastronomia e história.",
     "imagemUrl": "https://images.pexels.com/photos/1850619/pexels-photo-1850619.jpeg"
   },
   {
     "nome": "Nova York",
     "localizacao": "Estados Unidos",
     "categoria": "Cidade",
-    "descricao": "A cidade que nunca dorme, famosa pela Estátua da Liberdade.",
+    "descricao": "Nova York é a cidade que nunca dorme, oferecendo uma infinidade de atrações como a Estátua da Liberdade, Times Square, Central Park e Broadway. É um centro cultural, financeiro e artístico de renome internacional.",
     "imagemUrl": "https://images.pexels.com/photos/34344517/pexels-photo-34344517.jpeg"
   },
   {
     "nome": "Roma",
     "localizacao": "Itália",
     "categoria": "Cidade",
-    "descricao": "A cidade eterna, repleta de história e ruínas antigas.",
+    "descricao": "Roma, a cidade eterna, é um verdadeiro museu a céu aberto, com o Coliseu, o Fórum Romano, o Vaticano e suas praças históricas. Um destino repleto de cultura, gastronomia italiana autêntica e arquitetura impressionante.",
     "imagemUrl": "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg"
   },
   {
     "nome": "Maldivas",
     "localizacao": "Oceano Índico",
     "categoria": "Praia",
-    "descricao": "Ilhas paradisíacas de águas cristalinas e areias brancas.",
+    "descricao": "As Maldivas são um arquipélago de ilhas paradisíacas com águas cristalinas, areias brancas e recifes de corais incríveis. Ideal para quem busca relaxamento, mergulho e resorts luxuosos sobre o mar.",
     "imagemUrl": "https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg"
   },
   {
     "nome": "Machu Picchu",
     "localizacao": "Peru",
     "categoria": "Histórico",
-    "descricao": "Antiga cidade inca localizada nas montanhas dos Andes.",
+    "descricao": "Machu Picchu é uma antiga cidade inca situada nas montanhas dos Andes. Um local fascinante pela sua arquitetura e história, oferecendo trilhas espetaculares, como a Trilha Inca, e vistas panorâmicas inesquecíveis.",
     "imagemUrl": "https://images.pexels.com/photos/259967/pexels-photo-259967.jpeg"
   },
   {
     "nome": "Tóquio",
     "localizacao": "Japão",
     "categoria": "Cidade",
-    "descricao": "Metropole futurista com cultura tradicional japonesa.",
+    "descricao": "Tóquio combina tradição e modernidade, com templos históricos, jardins zen, tecnologia de ponta, cultura pop e culinária japonesa renomada mundialmente. É uma metrópole vibrante e dinâmica, perfeita para experiências únicas.",
     "imagemUrl": "https://images.pexels.com/photos/2341830/pexels-photo-2341830.jpeg"
+  },
+  {
+    "nome": "Urubici",
+    "localizacao": "Brasil",
+    "categoria": "Histórico/Natureza",
+    "descricao": "Urubici é uma charmosa cidade da Serra Catarinense, famosa por suas paisagens montanhosas, cachoeiras deslumbrantes e clima frio. É ideal para trilhas, aventuras ao ar livre e para quem deseja conhecer a cultura local e os encantos da natureza brasileira.",
+    "imagemUrl": "https://images.pexels.com/photos/16832538/pexels-photo-16832538.jpeg"
+  },
+  {
+    "nome": "Florianópolis",
+    "localizacao": "Brasil",
+    "categoria": "Praia/Cidade",
+    "descricao": "Florianópolis, conhecida como a 'Ilha da Magia', combina praias paradisíacas, dunas, lagoas e vida urbana vibrante. É famosa por praias como Joaquina e Jurerê Internacional, trilhas na natureza, esportes aquáticos e uma gastronomia rica em frutos do mar. Um destino que une aventura, lazer e cultura local.",
+    "imagemUrl": "https://images.pexels.com/photos/18090774/pexels-photo-18090774.jpeg"
+  },
+  {
+    "nome": "Rio de Janeiro",
+    "localizacao": "Brasil",
+    "categoria": "Cidade/Praia",
+    "descricao": "O Rio de Janeiro é conhecido pelo Cristo Redentor, Pão de Açúcar, Carnaval e suas belas praias como Copacabana e Ipanema. Uma cidade que combina cultura, festas, natureza exuberante e hospitalidade brasileira.",
+    "imagemUrl": "https://images.pexels.com/photos/351283/pexels-photo-351283.jpeg"
   }
 ]

@@ -50,7 +50,7 @@ public class RoteiroFragment extends Fragment implements RoteiroAdapter.OnRoteir
 
         roteiroViewModel = new ViewModelProvider(this).get(RoteiroViewModel.class);
 
-        // 🔹 Mostra e configura o botão de logout na toolbar
+        // Mostra e configura o botão de logout na toolbar
         ImageView icLogout = requireActivity().findViewById(R.id.icLogout);
         if (icLogout != null) {
             icLogout.setOnClickListener(v -> {
