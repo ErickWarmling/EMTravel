@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.emtravel.databinding.FragmentDestinoBinding;
 import com.example.emtravel.model.Destino;
-import com.example.emtravel.ui.DetalheDestinoActivity;
+import com.example.emtravel.ui.destino.detalhe.DetalheDestinoActivity;
 
 import java.util.ArrayList;
 import java.util.List;

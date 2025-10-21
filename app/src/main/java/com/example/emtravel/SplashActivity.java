@@ -16,7 +16,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.emtravel.ui.LoginActivity;
+import com.example.emtravel.ui.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

@@ -1,14 +1,14 @@
-package com.example.emtravel.ui;
+package com.example.emtravel.ui.cadastroUsuario;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.emtravel.model.Usuario;
+import com.example.emtravel.service.UsuarioRepository;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 public class CadastroUsuarioViewModel extends ViewModel {

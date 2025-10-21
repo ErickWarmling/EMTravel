@@ -1,19 +1,27 @@
 package com.example.emtravel.ui.perfil;
 
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PerfilViewModel extends ViewModel {
+import com.example.emtravel.model.Usuario;
+import com.example.emtravel.service.UsuarioRepository;
+import com.google.firebase.auth.FirebaseAuth;
 
-    private final MutableLiveData<String> mText;
+public class PerfilViewModel extends ViewModel {
+    private UsuarioRepository usuarioRepository;
+    private LiveData<Usuario> usuario;
 
     public PerfilViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        usuarioRepository = new UsuarioRepository();
+        usuario = usuarioRepository.getUsuarioLogado();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<Usuario> getUsuario() {
+        return usuario;
+    }
+
+    public void sair() {
+        FirebaseAuth.getInstance().signOut();
+
     }
 }

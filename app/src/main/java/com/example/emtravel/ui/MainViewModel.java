@@ -5,6 +5,7 @@ import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
 import com.example.emtravel.model.Usuario;
+import com.example.emtravel.service.UsuarioRepository;
 
 public class MainViewModel extends ViewModel {
 

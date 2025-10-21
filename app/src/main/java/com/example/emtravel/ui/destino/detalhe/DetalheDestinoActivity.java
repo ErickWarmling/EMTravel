@@ -1,4 +1,4 @@
-package com.example.emtravel.ui;
+package com.example.emtravel.ui.destino.detalhe;
 
 import android.os.Bundle;
 import android.widget.ImageView;

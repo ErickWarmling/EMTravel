@@ -1,4 +1,4 @@
-package com.example.emtravel.ui;
+package com.example.emtravel.service;
 
 import androidx.lifecycle.MutableLiveData;
 

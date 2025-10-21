@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#0F2536"
+            android:paddingHorizontal="12dp">
+
+            <ImageView
+                android:id="@+id/btnVoltar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:contentDescription="Voltar"
+                android:src="@drawable/ic_seta_voltar" />
+
+            <TextView
+                android:id="@+id/tvTituloToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Detalhes do Roteiro"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+
+        <!-- Imagem principal -->
+        <ImageView
+            android:id="@+id/imgRoteiro"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Imagem do Roteiro"
+            android:background="@color/black" />
+
+        <!-- Conteúdo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Nome do Roteiro centralizado -->
+            <TextView
+                android:id="@+id/tvNomeRoteiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome do Roteiro"
+                android:textColor="@color/azul_escuro"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Subtítulo Data de Início -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data de Início:"
+                android:textColor="@color/azul_escuro"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvDataInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="01/12/2025"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Subtítulo Data de Fim -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data de Fim:"
+                android:textColor="@color/azul_escuro"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvDataFim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="01/01/2026"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="12dp"
+                android:background="#CCCCCC" />
+
+            <!-- Título da lista de destinos -->
+            <TextView
+                android:id="@+id/tvTituloDestinos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Destinos do Roteiro"
+                android:textColor="@color/azul_escuro"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Mini lista estilizada -->
+            <LinearLayout
+                android:id="@+id/layoutDestinos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Cabeçalho -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0F2536"
+        android:paddingHorizontal="12dp">
+
+        <!-- Ícone de voltar -->
+        <ImageView
+            android:id="@+id/btnVoltar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_seta_voltar"
+            android:contentDescription="Voltar"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Título centralizado -->
+        <TextView
+            android:id="@+id/tvTituloToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Novo Roteiro"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <!-- Formulário -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do Roteiro"
+                android:textSize="18sp"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/edNomeRoteiro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bordas_arredondadas_edit_text"
+                android:hint="Ex: Europa 2025"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data de Início"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/edDataInicio"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="date"
+                android:background="@drawable/bordas_arredondadas_edit_text"
+                android:hint="dd/mm/aaaa"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data de Fim"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/edDataFim"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="date"
+                android:background="@drawable/bordas_arredondadas_edit_text"
+                android:hint="dd/mm/aaaa"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecione os destinos"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewDestinos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+            <Button
+                android:id="@+id/btnSalvarRoteiro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Salvar Roteiro"
+                android:backgroundTint="@color/orange_primary"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -2,35 +2,47 @@
 <androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toolbarPersonalizada"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="#0F2536">
+    android:background="#0F2536"
+    android:paddingHorizontal="12dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+        android:orientation="horizontal">
 
+        <!-- Logo -->
         <ImageView
             android:id="@+id/imageViewLogoApp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            app:srcCompat="@drawable/logo_emtravel" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/logo_emtravel"
+            android:contentDescription="@string/app_name" />
 
+        <!-- Saudação -->
         <TextView
             android:id="@+id/tvMensagemBoasVindas"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_marginStart="12dp"
             android:text="Olá, Usuário!"
             android:textColor="#FFFFFF"
-            android:textSize="23sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
+
+        <!-- Ícone de Logout -->
+        <ImageView
+            android:id="@+id/icLogout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_logout"
+            android:contentDescription="Sair"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true" />
     </LinearLayout>
 </androidx.appcompat.widget.Toolbar>

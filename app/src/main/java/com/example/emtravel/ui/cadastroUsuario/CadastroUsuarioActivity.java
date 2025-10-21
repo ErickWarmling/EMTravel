@@ -1,4 +1,4 @@
-package com.example.emtravel.ui;
+package com.example.emtravel.ui.cadastroUsuario;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.emtravel.R;
+import com.example.emtravel.ui.login.LoginActivity;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
 

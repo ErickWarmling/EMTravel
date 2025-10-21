@@ -1,22 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.roteiro.RoteiroFragment">
 
+    <!-- Título alinhado como em DestinoFragment -->
     <TextView
-        android:id="@+id/text_dashboard"
+        android:id="@+id/tvTituloRoteiro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="start"
+        android:padding="8dp"
+        android:text="Roteiros"
+        android:textColor="#0F2536"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- Botão Adicionar Roteiro mais destacado -->
+    <Button
+        android:id="@+id/btnAdicionarRoteiro"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/orange_primary"
+        android:text="Adicionar Roteiro"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_add"
+        android:drawablePadding="12dp"
+        android:padding="8dp" />
+
+    <!-- Mensagem quando não há roteiros -->
+    <TextView
+        android:id="@+id/tvMensagemVazio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Você ainda não possui roteiros cadastrados."
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="@color/azul_escuro"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp" />
+
+    <!-- Lista de roteiros -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRoteiros"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_roteiro" />
+
+</LinearLayout>

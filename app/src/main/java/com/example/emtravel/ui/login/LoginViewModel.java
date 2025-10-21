@@ -1,8 +1,10 @@
-package com.example.emtravel.ui;
+package com.example.emtravel.ui.login;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.ViewModel;
+
+import com.example.emtravel.service.UsuarioRepository;
 
 
 public class LoginViewModel extends ViewModel {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewRoteiro"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#C2C2C2"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCardsRoteiros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Imagem do primeiro destino -->
+        <ImageView
+            android:id="@+id/imageViewRoteiro"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <!-- Nome do roteiro -->
+        <TextView
+            android:id="@+id/tvNomeRoteiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="Roteiro: Europa 2025"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Período da viagem -->
+        <TextView
+            android:id="@+id/tvPeriodoRoteiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10/03/2025 - 25/03/2025"
+            android:textSize="14sp"
+            android:paddingBottom="4dp" />
+
+        <!-- Ícone de lixeira -->
+        <ImageButton
+            android:id="@+id/btnExcluirRoteiro"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_delete"
+            tools:ignore="MissingContentDescription" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
